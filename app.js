@@ -3,7 +3,8 @@
 //------------------------------------------------------------------------------
 // node.js starter application for Bluemix
 //------------------------------------------------------------------------------
-
+//AG Starts New Relic
+require("./newrelic").initialize();
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
@@ -20,9 +21,6 @@ app.use(express.static(__dirname + '/public'));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
-
-//AG Starts New Relic
-require("./newrelic").initialize();
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
