@@ -23,6 +23,8 @@ exports.config = {
    * Your New Relic license key.
    */
   license_key : NewRelicLicenseKey || "no-license-key-provided",
+ 
+  high_security : true,
 
   logging : {
     /**
