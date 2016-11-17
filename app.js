@@ -7,6 +7,17 @@
 require("./newrelic").initialize();
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
+
+var agent = require('bluemix-autoscaling-agent');
+/*
+var http = require('http');
+var server = http.createServer(function handler(req, res) {
+ console.log("Hello!");
+
+ }).listen(process.env.PORT || 3000);
+console.log('App is listening on port 3000');
+*/
+
 var express = require('express');
 
 // cfenv provides access to your Cloud Foundry environment
